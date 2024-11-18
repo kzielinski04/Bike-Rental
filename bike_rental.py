@@ -25,7 +25,7 @@ def rent_bike(customer_name:str, rental_duration:int)->list:
             rental.append(customer_name)
             rental.append(rental_duration)
             rental.append(calculate_cost(rental_duration))
-            return rental
+            save_rental(rental)
         
 def save_rental(rental:list):
     file = open("./data/rentals.json", "w")
